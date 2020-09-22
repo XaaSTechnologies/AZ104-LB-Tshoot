@@ -86,7 +86,7 @@ az network nsg create \
 az network nsg rule create \
   --resource-group RG-11-LB \
   --name AZ104-vNET-NSG-VM-01-RULE \
-  --nsg-name NSG-VM-01 \
+  --nsg-name NSG-VM-01\
   --protocol tcp \
   --direction inbound \
   --source-address-prefix '*' \
@@ -99,7 +99,7 @@ az network nsg rule create \
 az network nsg rule create \
   --resource-group RG-11-LB \
   --name AZ104-vNET-VM-01-SSH-RULE \
-  --nsg-name NSG-VM-01 \
+  --nsg-name NSG-VM-01\
   --protocol tcp \
   --direction inbound \
   --source-address-prefix '*' \
@@ -125,7 +125,7 @@ az network nsg create \
 az network nsg rule create \
   --resource-group RG-11-LB \
   --name AZ104-vNET-NSG-VM-02-RULE \
-  --nsg-name NSG-VM-02 \
+  --nsg-name NSG-VM-02\
   --protocol tcp \
   --direction inbound \
   --source-address-prefix '*' \
@@ -138,7 +138,7 @@ az network nsg rule create \
 az network nsg rule create \
   --resource-group RG-11-LB \
   --name AZ104-vNET-VM-02-SSH-RULE \
-  --nsg-name NSG-VM-02 \
+  --nsg-name NSG-VM-02\
   --protocol tcp \
   --direction inbound \
   --source-address-prefix '*' \
@@ -172,7 +172,7 @@ az vm extension set \
   --name CustomScript \
   --vm-name VM-01 \
   --resource-group RG-11-LB \
-  --settings '{"commandToExecute":"apt-get -y update && apt-get -y install apache2 && echo AZ-104 Load Balancing Tshoot Lab - VM-01 > /var/www/html/index.html"\}'
+  --settings '{"commandToExecute":"apt-get -y update && apt-get -y install apache2 && echo AZ-104 Load Balancing Tshoot Lab - VM-01 > /var/www/html/index.html"}'
 
 az vm create \
   --resource-group RG-11-LB \
@@ -189,7 +189,7 @@ az vm extension set \
   --name CustomScript \
   --vm-name VM-02 \
   --resource-group RG-11-LB \
-  --settings '{"commandToExecute":"apt-get -y update && apt-get -y install apache2 && echo AZ-104 Load Balancing Tshoot Lab - VM-02 > /var/www/html/index.html"\}'\
+  --settings '{"commandToExecute":"apt-get -y update && apt-get -y install apache2 && echo AZ-104 Load Balancing Tshoot Lab - VM-02 > /var/www/html/index.html"}'
 
 az vm create \
   --resource-group RG-11-LB \
